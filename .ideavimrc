@@ -1,0 +1,96 @@
+source ~/.vimrc
+
+set NERDTree
+set relativenumber
+set number
+set history=10000                 " keep x lines of command line history
+
+" Remap leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Tool windows
+map <leader>h <Action>(ActivateProjectToolWindow)
+
+" don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+
+
+nmap <leader>? :action GotoAction<CR>
+
+" change font size
+nmap + :action EditorIncreaseFontSize<CR>
+nmap - :action EditorDecreaseFontSize<CR>
+nmap <leader>= :action EditorResetFontSize<CR>
+
+" code navigation
+
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+
+nmap <leader>e :action GotoFile<CR>
+nmap <leader>a :action FindInPath<CR>
+nmap gr :action ShowUsages<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gs :action GotoSuperMethod<CR>
+
+nmap <leader>l :action NextTab<CR>
+nmap <leader>L :action PreviousTab<CR>
+
+nmap <leader>n :action GotoNextError<CR>
+
+
+nmap <leader>ri :action Inline<CR>
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rev :action IntroduceVariable<CR>
+vmap <leader>rev :action IntroduceVariable<CR>
+nmap <leader>rem :action ExtractMethod<CR>
+vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rm :action Move<CR>
+nmap <leader>ro :action OptimizeImports<CR>
+nmap <leader>rG :action Generate<CR>
+nmap <leader>w :action CloseEditor<CR>
+
+nmap <leader>f  :action ReformatCode<CR>
+
+nmap <, :action MoveElementLeft<CR>
+nmap >, :action MoveElementRight<CR>
+
+
+" Easy window split navigation {{{
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <C-h> <C-w>h
+
+
+" Some Git Shortcuts for view status, pull, and branches
+" Mapping mimic Fugitive in my native vim
+nmap <Leader>gs :action CheckinProject<CR>
+nmap <Leader>gc :action CheckinProject<CR>
+nmap <Leader>ga :action Git.Add<CR>
+nmap <Leader>gp :action Git.Pull<CR>
+nmap <Leader>gn :action Annotate<CR>
+nmap <Leader>gl :action Git.Log<CR>
+nmap <Leader>go :action Github.Open.In.Browser<CR>
+nmap <Leader>br :action Git.Branches<CR>
+nmap <Leader>gb :action Git.Branches<CR>
+
+" Building, Running and Debugging
+nmap ,c :action CompileDirty<cr>
+nmap ,r :action Run<cr>
+nmap ,R :action RunAnything<cr>
+nmap ,b :action Debug<cr>
+nmap ,c :action RunClass<cr>
+nmap ,d :action DebugClass<cr>
+nmap ,t :action RerunTests<cr>
+nmap ,T :action RerunFailedTests<cr>
+nmap ,p :action ToggleLineBreakpoint<cr>
+nmap ,i :action ParameterInfo<cr>
+
+" Commenting
+nmap <Leader>cc :action CommentByLineComment<CR>
+nmap <Leader>cb :action CommentByBlockComment<CR>
+
