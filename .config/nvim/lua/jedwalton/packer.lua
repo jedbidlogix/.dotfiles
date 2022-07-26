@@ -31,9 +31,13 @@ return require('packer').startup(function()
     use("sbdchd/neoformat")
 
     -- LSP
-    use 'neovim/nvim-lspconfig'
+    use "williamboman/nvim-lsp-installer"
+    use "neovim/nvim-lspconfig"
+
+
     use 'nvim-lua/lsp-status.nvim'
-    use 'mfussenegger/nvim-jdtls'
+    -- Java
+    use { "mfussenegger/nvim-jdtls", ft = { "java" }}
     use("onsails/lspkind-nvim")
     use("nvim-lua/lsp_extensions.nvim")
     use("glepnir/lspsaga.nvim")
@@ -68,6 +72,5 @@ return require('packer').startup(function()
     --Random
     use 'tpope/vim-commentary'
     use("mbbill/undotree")
-
 
 end)

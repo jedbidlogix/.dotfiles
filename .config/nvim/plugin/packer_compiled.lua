@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -94,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
     url = "https://github.com/tzachar/cmp-tabnine"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -103,6 +113,31 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
     url = "https://github.com/nvim-lua/lsp-status.nvim"
+  },
+  ["lsp_extensions.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim",
+    url = "https://github.com/nvim-lua/lsp_extensions.nvim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -129,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
     url = "https://github.com/mfussenegger/nvim-jdtls"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -149,10 +189,30 @@ _G.packer_plugins = {
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["rest.nvim"] = {
     loaded = true,
     path = "/home/jed/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/NTBBloodbath/rest.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/jed/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   undotree = {
     loaded = true,
