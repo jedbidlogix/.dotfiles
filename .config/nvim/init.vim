@@ -28,7 +28,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
