@@ -9,8 +9,8 @@ set history=10000                 " keep x lines of command line history
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-" Tool windows
-map <leader>h <Action>(ActivateProjectToolWindow)
+" Tool windows (NerdTree)
+map <leader>t <Action>(ActivateProjectToolWindow)
 
 " don't lose selection when indenting
 vnoremap < <gv
