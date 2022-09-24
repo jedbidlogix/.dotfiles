@@ -141,7 +141,3 @@ export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-xset r rate 225 70
-
-export JDK_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
-export PATH=${PATH}:${JAVA_HOME}/bin
