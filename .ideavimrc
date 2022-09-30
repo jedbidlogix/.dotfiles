@@ -48,6 +48,8 @@ nmap <leader>rev :action IntroduceVariable<CR>
 vmap <leader>rev :action IntroduceVariable<CR>
 nmap <leader>rem :action ExtractMethod<CR>
 vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rei :action ExtractInterface<CR>
+nmap <leader>rei :action ExtractInterface<CR>
 nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rG :action Generate<CR>
@@ -93,4 +95,3 @@ nmap ,i :action ParameterInfo<cr>
 " Commenting
 nmap <Leader>cc :action CommentByLineComment<CR>
 nmap <Leader>cb :action CommentByBlockComment<CR>
-
