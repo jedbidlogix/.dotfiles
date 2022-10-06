@@ -28,7 +28,7 @@ nmap <leader>= :action EditorResetFontSize<CR>
 " code navigation
 
 nnoremap <c-o> :action Back<cr>
-nnoremap <c-i> :action Forward<cr>
+nnoremap <c-e> :action Forward<cr>
 
 nmap <leader>e :action GotoFile<CR>
 nmap <leader>a :action FindInPath<CR>
@@ -48,6 +48,8 @@ nmap <leader>rev :action IntroduceVariable<CR>
 vmap <leader>rev :action IntroduceVariable<CR>
 nmap <leader>rem :action ExtractMethod<CR>
 vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rei :action ExtractInterface<CR>
+nmap <leader>rei :action ExtractInterface<CR>
 nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rG :action Generate<CR>
@@ -81,6 +83,7 @@ nmap <Leader>gb :action Git.Branches<CR>
 " Building, Running and Debugging
 nmap ,c :action CompileDirty<cr>
 nmap ,r :action Run<cr>
+nmap ,R :action RunWithCoverage<cr>
 nmap ,R :action RunAnything<cr>
 nmap ,b :action Debug<cr>
 nmap ,c :action RunClass<cr>
@@ -93,4 +96,3 @@ nmap ,i :action ParameterInfo<cr>
 " Commenting
 nmap <Leader>cc :action CommentByLineComment<CR>
 nmap <Leader>cb :action CommentByBlockComment<CR>
-
