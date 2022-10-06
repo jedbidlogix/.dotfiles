@@ -31,19 +31,22 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 
-"YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "" Plugins here
 call plug#begin()
-Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
-
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
+
+let python_highlight_all=1
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "cursor
 let &t_SI = "\e[6 q"
@@ -70,4 +73,3 @@ let g:tex_conceal='abdmg'
 " Or with a generic interface:
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-
