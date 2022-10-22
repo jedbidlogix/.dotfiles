@@ -41,7 +41,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -70,4 +70,6 @@ let g:tex_conceal='abdmg'
 " Or with a generic interface:
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+
 
