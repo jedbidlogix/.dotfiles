@@ -40,8 +40,6 @@ call plug#begin()
 Plug 'Valloric/YouCompleteMe'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
