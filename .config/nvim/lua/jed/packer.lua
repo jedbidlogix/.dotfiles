@@ -25,8 +25,15 @@ return require('packer').startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  use('neovim/nvim-lspconfig') -- Configurations for Nvim LSP
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/nvim-cmp")
 
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+
+  use("onsails/lspkind-nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
