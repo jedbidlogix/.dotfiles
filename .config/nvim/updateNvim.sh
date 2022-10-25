@@ -16,6 +16,7 @@ sudo npm install -g pyright -y
 sudo npm update -g pyright -y
 
 echo 'sumneko LSP setup'
+sudo apt install build-essential
 sudo apt-get install ninja-build
 cd ~/.config/nvim
 

@@ -179,7 +179,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 #
-# # Sreen brightness controls
+# # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
@@ -203,13 +203,8 @@ bindsym $mod+Ctrl+j resize grow height 1 px or 1 ppt
 bindsym $mod+Ctrl+k resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
 
-
-# switch to dvorak, and alt+space to toggle
-exec "setxkbmap -layout 'us' -variant 'dvorak'"
-# cursor blink delay and speed in no particular order
 exec "xset r rate 225 70"
 
-exec "setxkbmap -layout 'us' -variant 'dvorak' -option altwin:swap_alt_win"
 exec "setxkbmap -layout 'us' -variant 'dvorak' -option ctrl:swapcaps altwin:swap_alt_win"
 
 
