@@ -35,4 +35,5 @@ vim.g.mapleader = " "
 
 vim.cmd[[autocmd TextChanged,TextChangedI <buffer> silent write]]
 
-
+-- Lua
+vim.cmd[[colorscheme tokyonight]]

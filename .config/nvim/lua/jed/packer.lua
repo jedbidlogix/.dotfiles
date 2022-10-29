@@ -13,9 +13,6 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -25,15 +22,36 @@ return require('packer').startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+
   use('neovim/nvim-lspconfig') -- Configurations for Nvim LSP
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-path")
+  use("hrsh7th/cmp-cmdline")
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  use("onsails/lspkind-nvim")
+  use("glepnir/lspsaga.nvim")
+
+  use("nvim-treesitter/nvim-treesitter", {
+      run = ":TSUpdate"
+  })
 
   use("L3MON4D3/LuaSnip")
   use("saadparwaiz1/cmp_luasnip")
-
-  use("onsails/lspkind-nvim")
+  
+  use 'folke/tokyonight.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

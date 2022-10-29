@@ -3,4 +3,6 @@ require("jed.lsp")
 require("jed.set")
 require("jed.keymap")
 require("jed.nvim-tree")
-
+require("jed.lualine")
+require("jed.treesitter")
+require("jed.lspsaga")

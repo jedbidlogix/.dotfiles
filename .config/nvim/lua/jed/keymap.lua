@@ -9,8 +9,10 @@ map('n', '<leader>y', '"+y', {noremap = true, silent = false})
 map('v', '<leader>y', '"+y', {noremap = true, silent = false})
 map('n', '<leader>Y', '"+y$', {noremap = true, silent = false})
 
-map('n', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
-map('v', '<leader>t', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
+map('n', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
+map('v', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
+map('n', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
+map('v', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
 
 -- " Fast saving
 -- nmap <leader>w :w!<cr>
@@ -59,4 +61,15 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
+
+-- Telescope  
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<C-p>', builtin.grep_string, {})
+
+
+
 
