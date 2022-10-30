@@ -9,3 +9,5 @@ e.g
 $ mv ~/.config/i3 ~/.dotfiles/.config/i3
 
 
+#If F keys aren't enabled
+$ sudo update-initramfs -u
