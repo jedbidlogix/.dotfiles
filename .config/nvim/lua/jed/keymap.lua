@@ -14,6 +14,11 @@ map('v', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
 map('n', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
 map('v', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
 
+
+-- Undotree
+map('n', '<F5>', ':UndotreeToggle<CR>', {noremap = true, silent = false})
+map('v', '<F5>', ':UndotreeToggle<CR>', {noremap = true, silent = false})
+
 -- " Fast saving
 -- nmap <leader>w :w!<cr>
 
@@ -69,7 +74,5 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<C-p>', builtin.grep_string, {})
-
-
 
 

@@ -31,4 +31,25 @@ sudo bash compile/install.sh
 cd ../..
 sudo bash 3rd/luamake/luamake rebuild
 
+#For Telescope
 sudo apt-get install ripgrep -y
+
+echo 'typescript-language-server'
+npm install -g typescript-language-server typescript
+
+#Debugging JS.
+# Node debugging
+mkdir -p ~/dev/microsoft
+git clone https://github.com/microsoft/vscode-node-debug2.git ~/dev/microsoft/vscode-node-debug2
+cd ~/dev/microsoft/vscode-node-debug2
+npm install
+NODE_OPTIONS=--no-experimental-fetch npm run build-essential
+
+# Chrome debugging
+cd ~/dev/microsoft
+git clone https://github.com/Microsoft/vscode-chrome-debug
+cd ./vscode-chrome-debug
+npm install
+npm run build
+
+

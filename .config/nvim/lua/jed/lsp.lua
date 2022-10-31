@@ -80,6 +80,9 @@ cmp.setup.cmdline(':', {
 
 -- LSP Specific
 -- ------------
+-- TsServer 
+require('lspconfig')['tsserver'].setup{}
+
 -- PyRight - Python 
 require('lspconfig')['pyright'].setup{}
 
