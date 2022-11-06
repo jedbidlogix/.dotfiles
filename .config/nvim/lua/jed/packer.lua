@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-
   use('neovim/nvim-lspconfig') -- Configurations for Nvim LSP
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
@@ -61,17 +60,13 @@ return require('packer').startup(function(use)
   use('akinsho/bufferline.nvim')
   use("gruvbox-community/gruvbox")
 
-
   use("mbbill/undotree")
-
-
   -- LSP
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   }
   use("jose-elias-alvarez/null-ls.nvim")
-
 
   -- debugger
   use("mfussenegger/nvim-dap")

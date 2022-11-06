@@ -60,5 +60,5 @@ require("lspconfig").sumneko_lua.setup {
 }
 require("lspconfig").jedi_language_server.setup {}
 require("lspconfig").tsserver.setup {}
-
+require("lspconfig").jdtls.setup {}
 
