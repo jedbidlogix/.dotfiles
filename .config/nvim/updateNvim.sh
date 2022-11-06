@@ -13,29 +13,8 @@ echo 'installing node'
 sudo apt install nodejs -y
 sudo apt install npm -y
 
-echo 'pyright npm install'
-sudo npm install -g pyright -y
-sudo npm update -g pyright -y
-
-echo 'sumneko LSP setup'
-sudo apt install build-essential
-sudo apt-get install ninja-build
-cd ~/.config/nvim
-
-git clone  --depth=1 https://github.com/sumneko/lua-language-server 
-cd lua-language-server
-git submodule update --depth 1 --init --recursive
-
-cd 3rd/luamake
-sudo bash compile/install.sh
-cd ../..
-sudo bash 3rd/luamake/luamake rebuild
-
 #For Telescope
 sudo apt-get install ripgrep -y
-
-echo 'typescript-language-server'
-npm install -g typescript-language-server typescript
 
 #Debugging JS.
 # Node debugging
@@ -52,4 +31,5 @@ cd ./vscode-chrome-debug
 npm install
 npm run build
 
-
+#Font 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
