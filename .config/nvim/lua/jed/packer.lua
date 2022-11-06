@@ -21,12 +21,12 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'nvim-telescope/telescope-file-browser.nvim'
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -49,12 +49,29 @@ return require('packer').startup(function(use)
       run = ":TSUpdate"
   })
 
+  use ("windwp/nvim-autopairs")
+  use('windwp/nvim-ts-autotag')
+
   use("L3MON4D3/LuaSnip")
   use("saadparwaiz1/cmp_luasnip")
-  
-  use 'folke/tokyonight.nvim'
-  
+
+  -- themes
+  --use { "ellisonleao/gruvbox.nvim" }
+
+  use('akinsho/bufferline.nvim')
+  use("gruvbox-community/gruvbox")
+
+
   use("mbbill/undotree")
+
+
+  -- LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
+  use("jose-elias-alvarez/null-ls.nvim")
+
 
   -- debugger
   use("mfussenegger/nvim-dap")

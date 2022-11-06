@@ -8,3 +8,5 @@ require("jed.treesitter")
 require("jed.lspsaga")
 require("jed.symbols-outline")
 require("jed.dap")
+require("jed.nvim-autopairs")
+

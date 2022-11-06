@@ -11,8 +11,6 @@ map('n', '<leader>Y', '"+y$', {noremap = true, silent = false})
 
 map('n', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
 map('v', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = false})
-map('n', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
-map('v', '<leader>t', ':NvimTreeFocus<CR>', {noremap = true, silent = false})
 
 
 -- Undotree
@@ -69,10 +67,13 @@ end
 
 -- Telescope  
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<C-n>', builtin.find_files, {})
+vim.keymap.set('n', '<leader>lg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<C-p>', builtin.grep_string, {})
+
+require("telescope").load_extension "file_browser"
+vim.api.nvim_set_keymap("n", "<leader>t", ":Telescope file_browser<CR>", { noremap = true })
 
 

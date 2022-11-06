@@ -24,7 +24,8 @@ vim.opt.clipboard=unnamedplus
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
-vim.opt.updatetime = 50
+vim.opt.updatetime = 0
+
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
@@ -35,5 +36,5 @@ vim.g.mapleader = " "
 
 vim.cmd[[autocmd TextChanged,TextChangedI <buffer> silent write]]
 
--- Lua
-vim.cmd[[colorscheme tokyonight]]
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
